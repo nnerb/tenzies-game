@@ -1,0 +1,143 @@
+.main--container{
+    padding: 0 1rem;
+    z-index: 50;
+    margin: -175px auto 0 auto;
+    width: 100%;
+    max-width: 700px;
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #FFF;
+        border-radius: 5px;
+        padding: 2rem;
+        box-shadow: 0px 0px 7.68px rgba(172, 172, 172, 0.726);
+        gap: 20px;
+        overflow-x: auto;
+        position: relative;
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            width: 100%;    
+            justify-content: space-between;
+
+            .fa-arrow-left {
+                cursor: pointer;
+                font-size: 1.25rem;
+                border-radius: 999px;
+                padding: 0.5rem;
+            }
+            .fa-arrow-left:hover{
+                background-color: #5035FF;
+                color: white;
+            }
+
+            .title{
+                // flex: 1;
+                text-align: center;
+            }
+            
+            .reset-button {
+                padding: 0.5rem 1rem;
+                background: #d48114;
+                box-shadow: 0px 3.2px 4px rgba(0, 0, 0, 0.18);
+                border-radius: 3.81277px;
+                border:none;
+                font-size: 1rem;
+                cursor: pointer;
+                color: #FFF;
+            } 
+            
+            @media screen and (max-width: 390px){
+                .title{
+                    text-align: left;
+                }
+                .reset-button{
+                    position: static;
+                    transform: translate(0%);
+                }
+            }
+        }
+
+        .instructions {
+            text-align: center;
+            
+        }
+        
+        .dice-container {
+            width: 100%;
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px,1fr));
+            grid-template-rows: repeat(2,1fr);
+            gap: 20px;
+            max-width: 380px;
+
+           @import './die.scss';
+        }
+
+        .time-container{
+            display: flex;
+            align-items: center;
+
+            .fa-clock{
+                margin-right: 5px;
+                color: gray;
+            }
+            span{
+                font-weight: 700;
+            }
+        }
+
+        .attempts-container{
+            font-weight: 800;
+        }
+
+        .best-time {
+            color:#e6b71c;
+            font-weight: 900;
+            text-align: center;
+            
+            .fa-trophy, .best-time-text{
+                margin-right: 5px;
+            }
+            
+        }
+
+        .roll-dice{
+            background: #5035FF;
+            box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+            padding: 0.5rem 2rem;
+            border-radius: 3.81277px;
+            border:none;
+            font-size: 1rem;
+            cursor: pointer;
+            color: #FFF;
+            margin: 0 1rem;
+            display: flex ;
+        }
+        
+        .roll-dice:focus, .reset-button:focus, .change--name:focus {
+            outline: none;
+        }
+        
+        .roll-dice:active, .reset-button:active, .change--name:active{
+            box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+        }
+
+        .change--name{
+            background: #35ff68;
+            box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+            padding: 0.5rem 1rem;
+            border-radius: 3.81277px;
+            border:none;
+            font-size: 1rem;
+            cursor: pointer;
+            color: #FFF;
+            margin: 0 1rem;
+        }
+    }
+        
+}

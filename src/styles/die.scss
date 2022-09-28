@@ -1,0 +1,46 @@
+.die-face{
+    font-size: 4rem;
+    border-radius: 3.81277px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}   
+
+.die-num{
+    font-size: 2rem;
+}
+
+.start--button:active{
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.shaking{
+    animation-name: wobble;
+    animation-duration: 1s;
+}
+
+@keyframes wobble {
+    from {
+        transform: translate3d(0,0,0)
+    }
+    15% {
+        transform: translate3d(-25%,0,0) rotate3d(0,0,1,-5deg)
+    }
+    30% {
+        transform: translate3d(20%,0,0) rotate3d(0,0,1,3deg)
+    }
+    45% {
+        transform: translate3d(-15%,0,0) rotate3d(0,0,1,-3deg)
+    }
+    60% {
+        transform: translate3d(10%,0,0) rotate3d(0,0,1,1.5deg)
+    }
+    75% {
+        transform: translate3d(-5%,0,0) rotate3d(0,0,1,-1deg)
+    }
+    to {
+        transform: translate3d(0,0,0);
+    }
+
+}

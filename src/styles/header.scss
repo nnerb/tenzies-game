@@ -1,0 +1,11 @@
+section{
+    height: 300px;
+    background-image: url("../images/dice.jpg");
+    background-position: 50% 43%;
+    background-color:rgba(151,151,228,.3568627450980392);
+    background-blend-mode:lighten;
+    overflow: auto;
+    position: relative;
+    margin: 0;
+    z-index: -1;
+}
