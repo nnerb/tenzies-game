@@ -22,7 +22,7 @@ const Main = () => {
         pointerEvents: timer ? "auto" : "none",
         backgroundColor: timer ? "#d48114" : "#d48114a6"
     }
-
+    
     return (
             <main className="main">
                 <div className="header-container">

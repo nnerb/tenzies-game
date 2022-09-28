@@ -185,7 +185,8 @@ const App = () => {
     return <DieContext.Provider  key={die.id} value={{
             value: die.value,
             isHeld: die.isHeld,
-            toggle: () => toggle(die.id)
+            toggle: () => toggle(die.id),
+            tenzies
     }}>
             <Die
               key={die.id}

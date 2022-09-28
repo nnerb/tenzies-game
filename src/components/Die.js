@@ -3,10 +3,11 @@ import { DieContext } from "../Contexts/DieContext";
 
 const Die = () => {
 
-    const {value, isHeld, toggle} = useContext(DieContext)
+    const {value, isHeld, toggle,tenzies} = useContext(DieContext)
     
     const styles = {
-        color: isHeld ? "#59E391" : "#ca4545"
+        color: isHeld ? "#59E391" : "#ca4545",
+        pointerEvents: tenzies ? "none" : "auto"
     }
 
     return(
