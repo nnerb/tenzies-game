@@ -22,11 +22,15 @@ const Main = () => {
         pointerEvents: timer ? "auto" : "none",
         backgroundColor: timer ? "#d48114" : "#d48114a6"
     }
-    
+
+    const backButtonStyles = {
+        pointerEvents: timer || tenzies ? "none" : "auto"
+    }
+
     return (
             <main className="main">
                 <div className="header-container">
-                    <motion.i onClick={backButton} whileHover={{rotate: 50}} className="fa fa-arrow-left"></motion.i>
+                    <motion.i onClick={backButton} whileHover={{rotate: 50}} className="fa fa-arrow-left" style={backButtonStyles}></motion.i>
                     <h1 className="title">Tenzies</h1>
                     <button onClick={resetButton} className="reset-button" style={styles}>Reset</button>
                 </div>
