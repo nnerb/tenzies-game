@@ -52,7 +52,7 @@ const Main = () => {
                      <span> Attempts: </span>
                      <span>{attempts}</span>
                 </div>
-                <button className="roll-dice" onClick={roll} > {tenzies ? "New Game" : "Role"} </button> 
+                <button className="roll-dice" onClick={roll} > {tenzies ? "New Game" : "Roll"} </button> 
             </main>
   
     )
